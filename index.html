@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minecraft Stack Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1>Minecraft Stack Calculator</h1>
+
+    <input type="number" id="itemCount" placeholder="Enter total number of items">
+
+    <select id="stackSizeSelect" onchange="toggleCustomStackInput()">
+      <option value="64">64 (default)</option>
+      <option value="32">32</option>
+      <option value="16">16</option>
+      <option value="custom">Custom</option>
+    </select>
+
+    <input type="number" id="customStackSize" placeholder="Custom stack size" style="display: none;">
+
+    <button onclick="calculateStacks()">Generate</button>
+
+    <div id="output"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
